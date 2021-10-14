@@ -1,0 +1,15 @@
+def generate_random_data():
+    while True:
+        json_data = json.dumps(
+            {
+                "time": x_axis,
+                "value": accelerometer * 100,
+            }
+        )
+        yield f"data:{json_data}\n\n"
+        time.sleep(1)
+
+
+@app.route("/chart-data")
+def chart_data():
+    return Response(generate_random_data(), mimetype="text/event-stream")

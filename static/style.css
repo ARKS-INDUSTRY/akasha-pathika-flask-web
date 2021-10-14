@@ -1,0 +1,118 @@
+* {
+    margin: 0px;
+    border: 0px;
+}
+
+body {
+    background-image: url(static/resources/space.jpg);
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+    font-size: 35px;
+    margin-right: 5px;
+    padding: 5px;
+    color: white
+}
+
+p {
+    font-family: 'Gluten', cursive;
+}
+
+#left,
+#right,
+#forward,
+#backward,
+#stop,
+#collect,
+#load {
+    border-radius: 20px;
+    font-size: 20px;
+    height: 75px;
+    width: 180px;
+    padding: 20px;
+    align-items: center;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+    background-color: #0099ff;
+}
+
+span {
+    text-decoration: none;
+    color: white;
+    font-family: 'Gluten', cursive;
+    float: right;
+    backdrop-filter: blur(0px) saturate(197%);
+    -webkit-backdrop-filter: blur(0px) saturate(197%);
+    background-color: rgba(255, 255, 255, 0.28);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    padding: 5px
+}
+
+.controls {
+    width: 580px;
+    padding: 10px;
+    align-content: center;
+}
+
+#stop {
+    margin-left: 188px;
+    margin-right: 185px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disppear {
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.container,
+.card,
+.card-body {
+    z-index: -1;
+    width: 350px;
+    height: 185px;
+    float: right;
+}
